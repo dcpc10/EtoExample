@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/home/steve/Projects/cscode/src/github.com/SjB/EtoExample"
+		}
+	],
+	"settings":
+	{
+		"completesharp_assemblies":
+		[
+			"${project_path:build/*.dll}",
+			"${project_path:build/**/*.dll}",
+			"/usr/lib/cli/**/*.dll",
+			"/home/steve/Projects/cscode/pkgs/**/*.dll"
+		]
+	}
+}

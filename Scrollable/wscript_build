@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+# encoding: utf-8
+# Copyright (c) 2012 SjB <steve@sagacity.ca>. All Rights Reserved.
+
+install_path = '${PREFIX}/lib/' + bld.env.APPNAME
+
+external_libs = ['Eto', 'Eto.Platform']
+[bld.read_assembly(x, install_path = install_path) for x in external_libs]
+
+bld(features = 'cs cs_dev',
+    source = 'Properties/AssemblyInfo.cs Scrollable.cs',
+    install_path = install_path,
+    bintype = 'winexe',
+    gen = '{0}.exe'.format('Scrollable'),
+    use = external_libs)
+
