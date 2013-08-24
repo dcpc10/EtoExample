@@ -19,6 +19,7 @@ namespace Sagacity.EtoExample
 		const string APP_TITLE = "Scrollable Example";
 		static readonly Size DEFAULT_WINDOW_SIZE = new Size(800, 600);
 
+        [STAThread]
 		static void Main(string[] args)
 		{
 			var app = new Application();
